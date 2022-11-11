@@ -70,6 +70,9 @@ for (let i = 0; i < questions.length; i++) {
 
 }
 
+
+
+
 console.log("============================")
 console.log("Your total score: " + score);
 
