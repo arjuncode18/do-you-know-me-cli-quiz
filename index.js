@@ -59,7 +59,7 @@ var score = 0;
 
 for (let i = 0; i < questions.length; i++) {
   var receivedAns = readlineSync.question(questions[i].question + " ");
-  if (receivedAns.toLowerCase() === questions[i].answer) {
+  if (receivedAns.toLowerCase() === questions[i].answer.toLowerCase()) {
     console.log("Correct!");
     score += 1
   }
