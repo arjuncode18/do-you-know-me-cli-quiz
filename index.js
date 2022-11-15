@@ -1,6 +1,5 @@
 var readlineSync = require('readline-sync');
 
-//  input 
 
 var userName = readlineSync.question('Hey,What is your name? ');
 console.log('Heyy ', userName, '!');
@@ -58,8 +57,8 @@ questions = [questionOne, questionTwo, questionThree, questionFour, questionFive
 var score = 0;
 
 for (let i = 0; i < questions.length; i++) {
-  var receivedAns = readlineSync.question(questions[i].question + " ");
-  if (receivedAns.toLowerCase() === questions[i].answer.toLowerCase()) {
+ var gotAnswer =readlineSync.question(questions[i].question + " ");
+  if (gotAnswer.toLowerCase() === questions[i].answer.toLowerCase()) {
     console.log("Correct!");
     score += 1
   }
@@ -67,10 +66,8 @@ for (let i = 0; i < questions.length; i++) {
     console.log('Wrong Answer! Correct answer is: ', questions[i].answer);
 
   }
-
+console.log("============================")
 }
-
-
 
 
 console.log("============================")
@@ -79,9 +76,9 @@ console.log("Your total score: " + score);
 console.log("============================")
 
 function listScore() {
-  console.log("list of score,ping me your score i will add");
+  console.log("list of score,ping me your score i will add it");
 
-  listScorers.map(score => console.log(score.name, "::", score.score))
+  listScorers.map(val => console.log(val.name, "::", val.score))
 }
 listScore();
 
